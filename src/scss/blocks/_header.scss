@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+  z-index: 1;
+
+  &__navbar{
+    width: 100%;
+    padding: 54px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &__wrapper {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 30px;
+    overflow: hidden;
+  }
+}
+
+@media(min-width: $brp-md) {
+  .header {
+
+    &__wrapper {
+      justify-content: flex-start;
+      gap: 100px;
+    }
+  }
+}
+
+@media(min-width: $brp-lg) {
+  .header {
+
+    &__logo {
+      max-width: 123px;
+    }
+  }
+}
+
+@media(min-width: $brp-xl) {
+  .header {
+
+    &__wrapper {
+      gap: 130px;
+    }
+  }
+}

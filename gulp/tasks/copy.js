@@ -19,7 +19,7 @@ export const copyFonts = () => {
 export const copyLibs = () => {
   return app.gulp.src(app.path.public.libs)
     .pipe(changed(app.path.dest.libs))
-    .pipe(app.gulp.dest(app.path.dest.fonts))
+    .pipe(app.gulp.dest(app.path.dest.libs))
 }
 
 export const copyImages = () => {
