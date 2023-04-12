@@ -1,0 +1,81 @@
+.benefits {
+  padding: 80px 0;
+  background-color: $primary;
+
+  &__title {
+    color: #FFF;
+    margin-bottom: 75px;
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 35px;
+
+    &-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background-color: $icon-bg;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      margin-bottom: 40px;
+
+      &.browsing {
+        background-image: url('../img/icons/category.svg');
+      }
+
+      &.delivery {
+        background-image: url('../img/icons/delivery.svg');
+      }
+
+      &.payments {
+        background-image: url('../img/icons/wallet.svg');
+      }
+    }
+
+    &-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #FFF;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    &-description {
+      max-width: 230px;
+      font-size: 0.875rem;
+      line-height: 150%;
+      color: $secondary;
+      text-align: center;
+    }
+  }
+}
+
+@media(min-width: $brp-md) {
+  .benefits {
+    padding: 100px 0;
+  }
+}
+
+@media(min-width: $brp-lg) {
+  .benefits {
+
+    &__list {
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+}
