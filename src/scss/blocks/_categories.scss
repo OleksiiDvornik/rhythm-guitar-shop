@@ -1,0 +1,84 @@
+.categories {
+  padding: 80px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 220px));
+    justify-content: center;
+    list-style: none;
+    column-gap: $column-gap*2 + px;
+    row-gap: $row-gap + px;
+  }
+
+  &__item {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 30px 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 150%;
+    color: #FFF;
+    background-color: $muted;
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+      scale: 1.05;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &:nth-child(1) {
+      background-image: image-set(
+        url("../img/categories/acoustic.jpg") 1x,
+        url("../img/categories/acoustic@2x.jpg") 2x
+      );
+    }
+
+    &:nth-child(2) {
+      background-image: image-set(
+        url("../img/categories/electric.jpg") 1x,
+        url("../img/categories/electric@2x.jpg") 2x
+      );
+    }
+
+    &:nth-child(3) {
+      background-image: image-set(
+        url("../img/categories/basses.jpg") 1x,
+        url("../img/categories/basses@2x.jpg") 2x
+      );
+    }
+
+    &:nth-child(4) {
+      background-image: image-set(
+        url("../img/categories/collections.jpg") 1x,
+        url("../img/categories/collections@2x.jpg") 2x
+      );
+    }
+  }
+}
+
+@media(min-width: $brp-md) {
+  .categories {
+
+    &__list {
+      column-gap: $column-gap*3 + px;
+      row-gap: $row-gap*2 + px;
+    }
+  }
+}
