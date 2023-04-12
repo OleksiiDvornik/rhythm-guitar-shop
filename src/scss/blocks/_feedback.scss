@@ -1,0 +1,13 @@
+.feedback {
+  padding: 90px 0;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+}
+
+@media(min-width: $brp-xl) {
+  .feedback {
+    padding: 180px 0;
+  }
+}
